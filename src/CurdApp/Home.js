@@ -16,7 +16,7 @@ console.log("1111", data)
   return (
     <div className='container mt-5'>
       <h1>Curd App with JSON server</h1>
-      <Link className='btn btn-success'> Create User</Link>
+      <Link to="/create" className='btn btn-success'> Create User</Link>
       <table className='table'>
         <thead>
           <tr>
