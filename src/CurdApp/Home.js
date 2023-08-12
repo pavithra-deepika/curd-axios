@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
-
+import './style.css';
 function Home() {
   const [data, setData] = useState([])
 
@@ -14,9 +14,9 @@ useEffect(() => {
 }, [])
 console.log("1111", data)
   return (
-    <div className='container mt-5'>
+    <div className='container'>
       <h1>Curd App with JSON server</h1>
-      <Link to="/create" className='btn btn-success'> Create User</Link>
+      <Link to="/create" className='btn' > Create User</Link>
       <table className='table'>
         <thead>
           <tr>
@@ -34,8 +34,8 @@ console.log("1111", data)
               <td>{item.name}</td>
               <td>{item.email}</td>
               <td>
-                <button>Update</button>
-                <button>Delete</button>
+                <button id='update'>Update</button>
+                <button id='delete'> Delete</button>
               </td>
             </tr>
           ))}

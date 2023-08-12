@@ -1,6 +1,8 @@
 import axios from 'axios';
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
+import './style.css';
+
 
 function Create() {
     const [inputData, setInputData] = useState({
@@ -17,21 +19,21 @@ function Create() {
         })
     }
   return (
-    <div className='d-flex w-100 vh-100 justify-content-center align-items-center'>
+    <div className='form-container'>
         <div className='input'>
             <form onSubmit={handleSubmit}>
                 <div>
-                    <label htmlFor='name'>Name:</label>
+                    <label htmlFor='name'>Name:</label> <br />
                     <input type='text' className='form-control' name='name'
                     onChange={e => setInputData({...inputData, name:e.target.value})} />
                 </div>
                 <div>
-                    <label htmlFor='email'>Email:</label>
+                    <label htmlFor='email'>Email:</label><br />
                     <input type='text' className='form-control' name='email' 
                     onChange={e => setInputData({...inputData, email:e.target.value})} />
 
                     <br />
-                    <button className='btn btn-info'>Submit</button>
+                    <button className='btn-info' type='submit'>Submit</button>
                 </div>
             </form>
         </div>
