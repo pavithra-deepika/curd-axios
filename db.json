@@ -1,30 +1,39 @@
 {
-    "users": [
-        {
-            "id": 1,
-            "name": "pavi",
-            "email": "pavi@gmail.com"
-        },
-        {
-            "id": 2,
-            "name": "hari",
-            "email": "hari@gmail.com"
-        },
-        {
-            "id": 3,
-            "name": "riya",
-            "email": "riya@gmail.com"
-        },
-        {
-            "id": 4,
-            "name": "siva",
-            "email": "siva@gmail.com"
-        },
-        {
-            "id": 5,
-            "name": "saran",
-            "email": "saran@gmail.com"
-        }
-        
-    ]
+  "users": [
+    {
+      "id": 1,
+      "name": "pavi",
+      "email": "pavi@gmail.com"
+    },
+    {
+      "id": 2,
+      "name": "hari",
+      "email": "hari@gmail.com"
+    },
+    {
+      "id": 3,
+      "name": "riya",
+      "email": "riya@gmail.com"
+    },
+    {
+      "id": 4,
+      "name": "siva",
+      "email": "siva@gmail.com"
+    },
+    {
+      "id": 5,
+      "name": "saran",
+      "email": "saran@gmail.com"
+    },
+    {
+      "name": "saranhari96@gmail.com",
+      "email": "",
+      "id": 6
+    },
+    {
+      "name": "8489822144",
+      "email": "pavithradeepika301@gmail.com",
+      "id": 7
+    }
+  ]
 }
