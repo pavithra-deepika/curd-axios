@@ -8,10 +8,10 @@ function Home() {
 
 
 useEffect(() => {
-  axios.get('http://localhost:3000/users')
+  axios.get('http://localhost:3001/users')
   .then(res => setData(res.data))
   .catch(err => console.log(err))
-}, [])
+}, [data])
 console.log("1111", data)
   return (
     <div className='container'>
@@ -27,8 +27,8 @@ console.log("1111", data)
           </tr>
         </thead>
         <tbody>
-          {data.map((item, id) =>
-          (
+          {data?.map((item, id) =>
+          
             <tr key={id}>
               <td>{item.id}</td>
               <td>{item.name}</td>
@@ -38,7 +38,7 @@ console.log("1111", data)
                 <button id='delete'> Delete</button>
               </td>
             </tr>
-          ))}
+          )}
         </tbody>
       </table>
       
