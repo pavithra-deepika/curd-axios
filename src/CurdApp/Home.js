@@ -30,11 +30,11 @@ export default function Home() {
   }
 
   return (
-    <div classsName='container mt-5'>
-      <h2>Crud App with Json Server</h2>
-      <Link to="/create" className='btn btn-success my-3'>Create +</Link>
-      <table className='table'>
-        <thead>
+    <div classsName='container mt-5 mx-5'>
+      <h2 class="text-center fs-1">Crud App with Json Server</h2>
+      <Link to="/create" className='btn btn-success my-4 mx-5 fs-5 '  >Create +</Link>
+      <table className='table table-bordered mx-5 w-75'>
+        <thead class="table-light fs-4">
           <tr>
             <th>ID</th>
             <th>Name</th>
@@ -42,7 +42,7 @@ export default function Home() {
             <th>Action</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody class="table-light fs-5">
           {
             data.map((item, idx) => (
               <tr key={idx}>
