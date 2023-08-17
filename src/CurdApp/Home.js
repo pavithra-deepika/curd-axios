@@ -1,49 +1,47 @@
 
-import React, { useEffect, useState } from 'react'
-import axios from 'axios'
-import { Link } from 'react-router-dom'
-import './style.css';
-function Home() {
-  const [data, setData] = useState([])
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import { Link } from 'react-router-dom';
 
+export default function Home() {
+  const [data, setData] = useState([]);
 
-useEffect(() => {
-  axios.get('http://localhost:3001/users')
-  .then(res => setData(res.data))
-  .catch(err => console.log(err))
-}, [data])
-console.log("1111", data)
+  useEffect(() => {
+    axios.get("http://localhost:3001/users")
+    .then(res => setData(res.data))
+    .catch(err => console.log(err))
+  }, []);
+
   return (
-    <div className='container'>
-      <h1>Curd App with JSON server</h1>
-      <Link to="/create" className='btn' > Create User</Link>
+    <div classsName='container mt-5'>
+      <h2>Crud App with Json Server</h2>
+      <Link to="/create" className='btn btn-success my-3'>Create +</Link>
       <table className='table'>
         <thead>
           <tr>
-            <th>Id</th>
+            <th>ID</th>
             <th>Name</th>
             <th>Email</th>
             <th>Action</th>
           </tr>
         </thead>
         <tbody>
-          {data?.map((item, id) =>
-          
-            <tr key={id}>
-              <td>{item.id}</td>
-              <td>{item.name}</td>
-              <td>{item.email}</td>
-              <td>
-                <button id='update'>Update</button>
-                <button id='delete'> Delete</button>
-              </td>
-            </tr>
-          )}
+          {
+            data.map((item, idx) => (
+              <tr key={idx}>
+                <td>{item.id}</td>
+                <td>{item.name}</td>
+                <td>{item.email}</td>
+                <td>
+                  <Link className='text-decoration-none btn btn-sm btn-success' to={`/Update/${item.id}`}>Update</Link>
+                  <button>Delete</button>
+                  <button>Read</button>
+                </td>
+              </tr>
+            ))
+          }
         </tbody>
       </table>
-      
     </div>
   )
 }
-
-export default Home
