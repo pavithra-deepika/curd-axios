@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 export default function Home() {
+  // npx json-server --watch db.json --port 3001 json server link
   const [data, setData] = useState([]);    
   const navigate = useNavigate();
 
@@ -51,7 +52,7 @@ export default function Home() {
                 <td>{item.email}</td>
                 <td>
                   <Link className='text-decoration-none btn btn-sm btn-success' to={`/Update/${item.id}`}>Update</Link>
-                  <button className='text-decoration-none btn btn-sm btn-danger' onClick={e => handleDelete(item.id)}>Delete</button>
+                  <button className='text-decoration-none btn btn-sm btn-danger mx-3'  onClick={e => handleDelete(item.id)}>Delete</button>
 
                 </td>
               </tr>
